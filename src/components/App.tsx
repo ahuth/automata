@@ -1,5 +1,11 @@
 import React from 'react';
+import Controls from './Controls';
 
 export default function App() {
-  return <h1>hello world</h1>;
+  return (
+    <React.Fragment>
+      <Controls />
+      <hr />
+    </React.Fragment>
+  );
 }
