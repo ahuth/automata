@@ -22,7 +22,7 @@ export default class Controls extends React.Component<Props> {
         <input id={this.ruleId} type="number" min="0" max="255" value={rule} />
 
         <label htmlFor={this.rowsId}>Number of rows</label>
-        <input id={this.ruleId} type="number" min="0" max="50" value={rows} />
+        <input id={this.rowsId} type="number" min="0" max="50" value={rows} />
 
         <button onClick={onDrawClick} type="button">Draw</button>
       </section>
