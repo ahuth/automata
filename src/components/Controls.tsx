@@ -1,26 +1,16 @@
 import React from 'react';
-import uniqueId from '../utils/uniqueId';
-
-type Byte = number;
+import RuleSelector from './RuleSelector';
 
 type Props = {
   onDrawClick: () => void,
-  rule: Byte,
+  rule: number,
 }
 
-export default class Controls extends React.Component<Props> {
-  ruleId = uniqueId();
-
-  render() {
-    const { onDrawClick, rule } = this.props;
-
-    return (
-      <section aria-label="Cellular automata controls">
-        <label htmlFor={this.ruleId}>Rule</label>
-        <input id={this.ruleId} type="number" min="0" max="255" value={rule} />
-
-        <button onClick={onDrawClick} type="button">Draw</button>
-      </section>
-    );
-  }
+export default function Controls({ onDrawClick, rule }: Props) {
+  return (
+    <section aria-label="Cellular automata controls">
+      <RuleSelector rule={rule} />
+      <button onClick={onDrawClick} type="button">Draw</button>
+    </section>
+  );
 }
