@@ -1,3 +1,3 @@
 # Automata
 
-One dimensional cellular automata.
+Elementary cellular automata.
