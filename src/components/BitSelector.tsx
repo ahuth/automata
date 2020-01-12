@@ -1,12 +1,18 @@
 import React, { ChangeEvent } from 'react';
 
-type Props = {
+type Rule = {
   inputs: number[],
-  onChange: (event: ChangeEvent) => void,
   output: number,
 };
 
-export default function BitSelector({ inputs, onChange, output }: Props) {
+type Props = {
+  onChange: (event: ChangeEvent) => void,
+  rule: Rule,
+};
+
+export default function BitSelector({ onChange, rule }: Props) {
+  const { inputs, output } = rule;
+
   return (
     <div style={styles.container}>
       <div style={styles.inputs}>

@@ -16,7 +16,7 @@ export default function RuleSelector({ rules }: Props) {
       <legend>Automata Rule</legend>
       <div style={styles.selectors}>
         {rules.map(function (rule) {
-          return <BitSelector key={rule.inputs.join()} inputs={rule.inputs} output={rule.output} onChange={console.log} />;
+          return <BitSelector key={rule.inputs.join()} rule={rule} onChange={console.log} />;
         })}
       </div>
     </fieldset>
