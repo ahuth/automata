@@ -16,7 +16,12 @@ export default function BitSelector({ onChange, rule }: Props) {
           return <div style={input === 0 ? styles.off : styles.on} key={index} />;
         })}
       </div>
-      <input aria-label={Rule.humanReadableInputs(rule)} checked={output === 0 ? false : true} onChange={onChange} type="checkbox" />
+      <input
+        aria-label={Rule.humanReadableInputs(rule)}
+        checked={output === 0 ? false : true}
+        onChange={onChange}
+        type="checkbox"
+      />
     </div>
   );
 }
