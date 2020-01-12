@@ -15,7 +15,7 @@ export default function App() {
 
   return (
     <React.Fragment>
-      <Controls rules={rules} onDrawClick={() => console.log('clicked')} />
+      <Controls rules={rules} onDrawClick={console.log} />
       <hr />
     </React.Fragment>
   );
