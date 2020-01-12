@@ -11,6 +11,9 @@ type Props = {
 };
 
 export default function RuleSelector({ rules }: Props) {
+  const outputBits = rules.map(rule => rule.output);
+  const ruleNumber = parseInt(outputBits.join(''), 2);
+
   return (
     <fieldset style={styles.container}>
       <legend>Automata Rule</legend>
@@ -19,13 +22,14 @@ export default function RuleSelector({ rules }: Props) {
           return <BitSelector key={rule.inputs.join()} rule={rule} onChange={console.log} />;
         })}
       </div>
+      <span>Rule {ruleNumber}</span>
     </fieldset>
   );
 }
 
 const styles = {
   container: {
-    width: 500,
+    width: 600,
   },
   selectors: {
     display: 'flex',
