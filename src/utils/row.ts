@@ -5,8 +5,11 @@ type Row = number[];
 
 export type Type = Row;
 
-export function create(): Row {
-  return [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+export function create(size: number): Row {
+  const row = new Array(size).fill(0);
+  const middle = Math.floor(row.length / 2);
+  row[middle] = 1;
+  return row;
 }
 
 export function next(row: Row, rules: Rule.Type[]): Row {

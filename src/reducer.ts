@@ -18,7 +18,7 @@ export type Action =
 
 export type Dispatch = React.Dispatch<Action>;
 
-export const initialState: State = Automata.create();
+export const initialState: State = Automata.create(51);
 
 export default function reducer(state: State, action: Action) {
   switch (action.type) {

@@ -10,7 +10,7 @@ export default function App() {
     <React.Fragment>
       <Controls dispatch={dispatch} rules={state.rules} />
       <hr />
-      <Grid columns={21} rows={state.rows} />
+      <Grid rows={state.rows} />
     </React.Fragment>
   );
 }

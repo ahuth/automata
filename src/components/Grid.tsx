@@ -2,11 +2,10 @@ import React from 'react';
 import { Type as Row } from '../utils/row';
 
 type Props = {
-  columns: number,
   rows: Row[],
 };
 
-export default function Grid({ rows, columns }: Props) {
+export default function Grid({ rows }: Props) {
   return (
     <div style={styles.container}>
       {rows.map(function (row) {

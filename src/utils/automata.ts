@@ -8,9 +8,9 @@ type Automata = {
 
 export type Type = Automata;
 
-export function create(): Automata {
+export function create(size: number): Automata {
   return {
-    rows: [Row.create()],
+    rows: [Row.create(size)],
     rules: [
       Rule.create([1, 1, 1], 0),
       Rule.create([1, 1, 0], 1),
