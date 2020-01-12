@@ -1,36 +1,32 @@
-import * as Row from './row';
 import * as Rule from './rule';
+import * as World from './world';
 
 type Automata = {
-  rows: Row.Type[],
+  height: number,
+  width: number,
+  rows: World.Type,
   rules: Rule.Type[],
 };
 
 export type Type = Automata;
 
-export function create(size: number): Automata {
-  return {
-    rows: [Row.create(size)],
-    rules: [
-      Rule.create([1, 1, 1], 0),
-      Rule.create([1, 1, 0], 1),
-      Rule.create([1, 0, 1], 0),
-      Rule.create([1, 0, 0], 1),
-      Rule.create([0, 1, 1], 1),
-      Rule.create([0, 1, 0], 0),
-      Rule.create([0, 0, 1], 1),
-      Rule.create([0, 0, 0], 0),
-    ],
-  };
-}
-
-export function iterate(automata: Automata): Automata {
-  const lastRow = automata.rows[automata.rows.length - 1];
-  const nextRow = Row.next(lastRow, automata.rules);
+export function create(height: number, width: number): Automata {
+  const rules = [
+    Rule.create([1, 1, 1], 0),
+    Rule.create([1, 1, 0], 1),
+    Rule.create([1, 0, 1], 0),
+    Rule.create([1, 0, 0], 1),
+    Rule.create([0, 1, 1], 1),
+    Rule.create([0, 1, 0], 0),
+    Rule.create([0, 0, 1], 1),
+    Rule.create([0, 0, 0], 0),
+  ];
 
   return {
-    ...automata,
-    rows: automata.rows.concat([nextRow]),
+    height,
+    width,
+    rows: World.create(height, width, rules),
+    rules,
   };
 }
 
@@ -44,6 +40,7 @@ export function toggleRuleBit(automata: Automata, serializedOutputs: string): Au
 
   return {
     ...automata,
+    rows: World.create(automata.height, automata.width, nextRules),
     rules: nextRules,
   };
 }

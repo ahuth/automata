@@ -8,11 +8,11 @@ type Props = {
 export default function Grid({ rows }: Props) {
   return (
     <div style={styles.container}>
-      {rows.map(function (row) {
+      {rows.map(function (row, index) {
         return (
-          <div style={styles.row}>
-            {row.map(function (value) {
-              return <div style={value === 0 ? styles.off : styles.on} />;
+          <div key={index} style={styles.row}>
+            {row.map(function (value, index) {
+              return <div key={index} style={value === 0 ? styles.off : styles.on} />;
             })}
           </div>
         );
