@@ -1,23 +1,17 @@
 import React, { useCallback } from 'react';
-import { Dispatch } from '../reducer';
 import * as Rule from '../utils/rule';
 
 type Props = {
-  dispatch: Dispatch,
   rule: Rule.Type,
+  toggle: (inputs: string) => void,
 };
 
-export default function BitSelector({ dispatch, rule }: Props) {
+export default function BitSelector({ rule, toggle }: Props) {
   const { inputs, output } = rule;
 
   const handleChange = useCallback(function () {
-    dispatch({
-      type: 'toggle_rule_bit',
-      payload: {
-        serializedInputs: Rule.machineReadableInputs(rule),
-      },
-    });
-  }, [dispatch, rule]);
+    toggle(Rule.machineReadableInputs(rule));
+  }, [rule, toggle]);
 
   return (
     <div style={styles.container}>

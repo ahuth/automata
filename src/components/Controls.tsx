@@ -1,17 +1,16 @@
 import React from 'react';
 import RuleSelector from './RuleSelector';
-import { Dispatch } from '../reducer';
 import { Type as Rule } from '../utils/rule';
 
 type Props = {
-  dispatch: Dispatch,
   rules: Rule[],
-}
+  toggleRule: (inputs: string) => void,
+};
 
-export default function Controls({ dispatch, rules }: Props) {
+export default function Controls({ rules, toggleRule }: Props) {
   return (
     <section aria-label="Cellular automata controls">
-      <RuleSelector dispatch={dispatch} rules={rules} />
+      <RuleSelector toggleRule={toggleRule} rules={rules} />
     </section>
   );
 }

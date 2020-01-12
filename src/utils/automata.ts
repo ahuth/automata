@@ -30,7 +30,7 @@ export function create(height: number, width: number): Automata {
   };
 }
 
-export function toggleRuleBit(automata: Automata, serializedOutputs: string): Automata {
+export function toggleRule(automata: Automata, serializedOutputs: string): Automata {
   const nextRules = automata.rules.map(function (rule) {
     if (Rule.machineReadableInputs(rule) === serializedOutputs) {
       return Rule.toggle(rule);

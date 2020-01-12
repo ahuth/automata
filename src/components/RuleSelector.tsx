@@ -1,14 +1,13 @@
 import React from 'react';
 import BitSelector from './BitSelector';
-import { Dispatch } from '../reducer';
 import * as Rule from '../utils/rule';
 
 type Props = {
-  dispatch: Dispatch,
   rules: Rule.Type[],
+  toggleRule: (inputs: string) => void,
 };
 
-export default function RuleSelector({ dispatch, rules }: Props) {
+export default function RuleSelector({ rules, toggleRule }: Props) {
   const outputBits = rules.map(rule => rule.output);
   const ruleNumber = parseInt(outputBits.join(''), 2);
 
@@ -17,7 +16,7 @@ export default function RuleSelector({ dispatch, rules }: Props) {
       <legend>Automata Rule</legend>
       <div style={styles.selectors}>
         {rules.map(function (rule) {
-          return <BitSelector dispatch={dispatch} key={Rule.machineReadableInputs(rule)} rule={rule} />;
+          return <BitSelector key={Rule.machineReadableInputs(rule)} rule={rule} toggle={toggleRule} />;
         })}
       </div>
       <span>Rule {ruleNumber}</span>
