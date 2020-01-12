@@ -1,21 +1,8 @@
-import * as Rule from './utils/rule';
+import * as Automata from './utils/automata';
 
-export type State = {
-  rules: Rule.Type[],
-};
+export type State = Automata.Type;
 
-export const initialState: State = {
-  rules: [
-    Rule.create([1, 1, 1], 0),
-    Rule.create([1, 1, 0], 1),
-    Rule.create([1, 0, 1], 0),
-    Rule.create([1, 0, 0], 1),
-    Rule.create([0, 1, 1], 1),
-    Rule.create([0, 1, 0], 0),
-    Rule.create([0, 0, 1], 1),
-    Rule.create([0, 0, 0], 0),
-  ],
-};
+export const initialState: State = Automata.create();
 
 export default function reducer(state: State, action: any) {
   switch (action.type) {
