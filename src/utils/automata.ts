@@ -13,11 +13,11 @@ export type Type = Automata;
 export function create(height: number, width: number): Automata {
   const rules = [
     Rule.create([1, 1, 1], 0),
-    Rule.create([1, 1, 0], 1),
+    Rule.create([1, 1, 0], 0),
     Rule.create([1, 0, 1], 0),
     Rule.create([1, 0, 0], 1),
     Rule.create([0, 1, 1], 1),
-    Rule.create([0, 1, 0], 0),
+    Rule.create([0, 1, 0], 1),
     Rule.create([0, 0, 1], 1),
     Rule.create([0, 0, 0], 0),
   ];
