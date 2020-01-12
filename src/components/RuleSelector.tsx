@@ -1,22 +1,30 @@
 import React from 'react';
-import uniqueId from '../utils/uniqueId';
+import BitSelector from './BitSelector';
 
-type Props = {
-  rule: number,
+export default function RuleSelector() {
+  return (
+    <fieldset style={styles.container}>
+      <legend>Automata Rule</legend>
+      <div style={styles.selectors}>
+        <BitSelector inputs={[1, 1, 1]} output={false} onChange={console.log} />
+        <BitSelector inputs={[1, 1, 0]} output={false} onChange={console.log} />
+        <BitSelector inputs={[1, 0, 1]} output={false} onChange={console.log} />
+        <BitSelector inputs={[1, 0, 0]} output={false} onChange={console.log} />
+        <BitSelector inputs={[0, 1, 1]} output={false} onChange={console.log} />
+        <BitSelector inputs={[0, 1, 0]} output={false} onChange={console.log} />
+        <BitSelector inputs={[0, 0, 1]} output={false} onChange={console.log} />
+        <BitSelector inputs={[0, 0, 0]} output={false} onChange={console.log} />
+      </div>
+    </fieldset>
+  );
 }
 
-export default class Controls extends React.Component<Props> {
-  ruleId = uniqueId();
-
-  render() {
-    const { rule } = this.props;
-
-    return (
-      <fieldset>
-        <legend>Automata Rule</legend>
-        <label htmlFor={this.ruleId}>Rule</label>
-        <input id={this.ruleId} type="number" min="0" max="255" value={rule} />
-      </fieldset>
-    );
-  }
-}
+const styles = {
+  container: {
+    width: 500,
+  },
+  selectors: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
+};

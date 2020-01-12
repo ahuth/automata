@@ -3,13 +3,12 @@ import RuleSelector from './RuleSelector';
 
 type Props = {
   onDrawClick: () => void,
-  rule: number,
 }
 
-export default function Controls({ onDrawClick, rule }: Props) {
+export default function Controls({ onDrawClick }: Props) {
   return (
     <section aria-label="Cellular automata controls">
-      <RuleSelector rule={rule} />
+      <RuleSelector />
       <button onClick={onDrawClick} type="button">Draw</button>
     </section>
   );

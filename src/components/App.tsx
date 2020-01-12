@@ -4,7 +4,7 @@ import Controls from './Controls';
 export default function App() {
   return (
     <React.Fragment>
-      <Controls rule={30} onDrawClick={() => console.log('clicked')} />
+      <Controls onDrawClick={() => console.log('clicked')} />
       <hr />
     </React.Fragment>
   );
