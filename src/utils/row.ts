@@ -1,4 +1,3 @@
-import eachCons from './eachCons';
 import * as Rule from './rule';
 
 type Row = number[];
@@ -13,8 +12,20 @@ export function create(size: number): Row {
 }
 
 export function next(row: Row, rules: Rule.Type[]): Row {
-  return eachCons(row, 3).map(function (neighbors) {
+  return eachNeighborhood(row).map(function (neighbors) {
     const rule = Rule.find(rules, neighbors);
     return rule.output;
+  });
+}
+
+function eachNeighborhood(row: Row): number[][] {
+  return row.map(function (value, index, array) {
+    const prevIndex = index - 1;
+    const nextIndex = index + 1;
+
+    const prevValue = prevIndex < 0 ? 0 : array[prevIndex];
+    const nextValue = nextIndex >= array.length ? 0 : array[nextIndex];
+
+    return [prevValue, value, nextValue];
   });
 }
