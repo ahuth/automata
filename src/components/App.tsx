@@ -16,7 +16,8 @@ export default function App() {
     <React.Fragment>
       <RuleSelector rules={automata.rules} toggleRule={toggleRule} />
       <aside>
-        <p>Some of the more interesting rules are: 30, 54, 60, 62, 90, 94, 102, 110, 122, 126, 150, 158, 182, 188, 190, 222</p>
+        <p>Some of the more interesting rules are: 30, 54, 60, 62, 90, 94, 102, 110, 122, 126, 150, 158, 182, 188, 190, 222.</p>
+        <p>View the source code at <a href="https://github.com/ahuth/automata">https://github.com/ahuth/automata</a>.</p>
       </aside>
       <hr />
       <Grid rows={automata.rows} />
