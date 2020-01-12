@@ -2,9 +2,12 @@
   "name": "automata",
   "private": true,
   "license": "MIT",
+  "homepage": "https://ahuth.github.io/automata",
   "scripts": {
     "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src/",
+    "predeploy": "npm run build",
     "start": "react-scripts start",
     "types": "tsc --noEmit"
   },
@@ -16,6 +19,7 @@
   "devDependencies": {
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
+    "gh-pages": "^2.2.0",
     "typescript": "^3.7.4"
   },
   "browserslist": [
