@@ -20,3 +20,17 @@ export function create(): Automata {
     ],
   };
 }
+
+export function toggleRuleBit(automata: Automata, serializedOutputs: string): Automata {
+  const nextRules = automata.rules.map(function (rule) {
+    if (Rule.machineReadableInputs(rule) === serializedOutputs) {
+      return Rule.toggle(rule);
+    }
+    return rule;
+  });
+
+  return {
+    ...automata,
+    rules: nextRules,
+  };
+}

@@ -16,3 +16,10 @@ export function machineReadableInputs(rule: Rule): string {
 export function humanReadableInputs(rule: Rule): string {
   return rule.inputs.join();
 }
+
+export function toggle(rule: Rule): Rule {
+  return {
+    ...rule,
+    output: rule.output === 0 ? 1 : 0,
+  };
+}

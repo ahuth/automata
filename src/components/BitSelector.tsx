@@ -1,13 +1,23 @@
-import React, { ChangeEvent } from 'react';
+import React, { useCallback } from 'react';
+import { Dispatch } from '../reducer';
 import * as Rule from '../utils/rule';
 
 type Props = {
-  onChange: (event: ChangeEvent) => void,
+  dispatch: Dispatch,
   rule: Rule.Type,
 };
 
-export default function BitSelector({ onChange, rule }: Props) {
+export default function BitSelector({ dispatch, rule }: Props) {
   const { inputs, output } = rule;
+
+  const handleChange = useCallback(function () {
+    dispatch({
+      type: 'toggle_rule_bit',
+      payload: {
+        serializedInputs: Rule.machineReadableInputs(rule),
+      },
+    });
+  }, [dispatch, rule]);
 
   return (
     <div style={styles.container}>
@@ -19,7 +29,7 @@ export default function BitSelector({ onChange, rule }: Props) {
       <input
         aria-label={Rule.humanReadableInputs(rule)}
         checked={output === 0 ? false : true}
-        onChange={onChange}
+        onChange={handleChange}
         type="checkbox"
       />
     </div>

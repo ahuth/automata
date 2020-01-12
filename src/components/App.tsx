@@ -3,11 +3,11 @@ import Controls from './Controls';
 import reducer, { initialState } from '../reducer';
 
 export default function App() {
-  const [state] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <React.Fragment>
-      <Controls rules={state.rules} onDrawClick={console.log} />
+      <Controls dispatch={dispatch} rules={state.rules} />
       <hr />
     </React.Fragment>
   );
