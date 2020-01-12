@@ -1,11 +1,9 @@
 import React, { ChangeEvent } from 'react';
 
-type Bit = 0 | 1;
-
 type Props = {
-  inputs: Bit[],
+  inputs: number[],
   onChange: (event: ChangeEvent) => void,
-  output: boolean,
+  output: number,
 };
 
 export default function BitSelector({ inputs, onChange, output }: Props) {
@@ -13,10 +11,10 @@ export default function BitSelector({ inputs, onChange, output }: Props) {
     <div style={styles.container}>
       <div style={styles.inputs}>
         {inputs.map(function (input, index) {
-          return <div style={input === 1 ? styles.on : styles.off} key={index} />;
+          return <div style={input === 0 ? styles.off : styles.on} key={index} />;
         })}
       </div>
-      <input aria-label={inputs.join()} checked={output} onChange={onChange} type="checkbox" />
+      <input aria-label={inputs.join()} checked={output === 0 ? false : true} onChange={onChange} type="checkbox" />
     </div>
   );
 }

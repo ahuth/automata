@@ -1,19 +1,23 @@
 import React from 'react';
 import BitSelector from './BitSelector';
 
-export default function RuleSelector() {
+type Rule = {
+  inputs: number[],
+  output: number,
+};
+
+type Props = {
+  rules: Rule[],
+};
+
+export default function RuleSelector({ rules }: Props) {
   return (
     <fieldset style={styles.container}>
       <legend>Automata Rule</legend>
       <div style={styles.selectors}>
-        <BitSelector inputs={[1, 1, 1]} output={false} onChange={console.log} />
-        <BitSelector inputs={[1, 1, 0]} output={false} onChange={console.log} />
-        <BitSelector inputs={[1, 0, 1]} output={false} onChange={console.log} />
-        <BitSelector inputs={[1, 0, 0]} output={false} onChange={console.log} />
-        <BitSelector inputs={[0, 1, 1]} output={false} onChange={console.log} />
-        <BitSelector inputs={[0, 1, 0]} output={false} onChange={console.log} />
-        <BitSelector inputs={[0, 0, 1]} output={false} onChange={console.log} />
-        <BitSelector inputs={[0, 0, 0]} output={false} onChange={console.log} />
+        {rules.map(function (rule) {
+          return <BitSelector key={rule.inputs.join()} inputs={rule.inputs} output={rule.output} onChange={console.log} />;
+        })}
       </div>
     </fieldset>
   );
