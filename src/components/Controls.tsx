@@ -1,10 +1,6 @@
 import React from 'react';
 import RuleSelector from './RuleSelector';
-
-type Rule = {
-  inputs: number[],
-  output: number,
-};
+import { Type as Rule } from '../utils/rule';
 
 type Props = {
   onDrawClick: () => void,

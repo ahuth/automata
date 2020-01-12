@@ -1,13 +1,9 @@
 import React, { ChangeEvent } from 'react';
-
-type Rule = {
-  inputs: number[],
-  output: number,
-};
+import * as Rule from '../utils/rule';
 
 type Props = {
   onChange: (event: ChangeEvent) => void,
-  rule: Rule,
+  rule: Rule.Type,
 };
 
 export default function BitSelector({ onChange, rule }: Props) {
@@ -20,7 +16,7 @@ export default function BitSelector({ onChange, rule }: Props) {
           return <div style={input === 0 ? styles.off : styles.on} key={index} />;
         })}
       </div>
-      <input aria-label={inputs.join()} checked={output === 0 ? false : true} onChange={onChange} type="checkbox" />
+      <input aria-label={Rule.humanReadableInputs(rule)} checked={output === 0 ? false : true} onChange={onChange} type="checkbox" />
     </div>
   );
 }

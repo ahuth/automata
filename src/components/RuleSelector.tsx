@@ -1,13 +1,9 @@
 import React from 'react';
 import BitSelector from './BitSelector';
-
-type Rule = {
-  inputs: number[],
-  output: number,
-};
+import * as Rule from '../utils/rule';
 
 type Props = {
-  rules: Rule[],
+  rules: Rule.Type[],
 };
 
 export default function RuleSelector({ rules }: Props) {
@@ -19,7 +15,7 @@ export default function RuleSelector({ rules }: Props) {
       <legend>Automata Rule</legend>
       <div style={styles.selectors}>
         {rules.map(function (rule) {
-          return <BitSelector key={rule.inputs.join()} rule={rule} onChange={console.log} />;
+          return <BitSelector key={Rule.machineReadableInputs(rule)} rule={rule} onChange={console.log} />;
         })}
       </div>
       <span>Rule {ruleNumber}</span>
