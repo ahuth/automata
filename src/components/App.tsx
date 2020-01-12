@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
-import Controls from './Controls';
 import Grid from './Grid';
+import RuleSelector from './RuleSelector';
 import * as Automata from '../utils/automata';
 
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
 
   return (
     <React.Fragment>
-      <Controls rules={automata.rules} toggleRule={toggleRule} />
+      <RuleSelector rules={automata.rules} toggleRule={toggleRule} />
       <aside>
         <p>Some of the more interesting rules are: 30, 54, 60, 62, 90, 94, 102, 110, 122, 126, 150, 158, 182, 188, 190, 222</p>
       </aside>
