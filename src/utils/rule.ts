@@ -23,3 +23,11 @@ export function toggle(rule: Rule): Rule {
     output: rule.output === 0 ? 1 : 0,
   };
 }
+
+export function find(rules: Rule[], neighbors: number[]): Rule {
+  const matchingRule = rules.find(function (rule) {
+    return machineReadableInputs(rule) === neighbors.join('');
+  });
+
+  return matchingRule || { inputs: [], output: 0 };
+}

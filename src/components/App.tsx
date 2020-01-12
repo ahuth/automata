@@ -1,5 +1,6 @@
 import React, { useReducer } from 'react';
 import Controls from './Controls';
+import Grid from './Grid';
 import reducer, { initialState } from '../reducer';
 
 export default function App() {
@@ -9,6 +10,7 @@ export default function App() {
     <React.Fragment>
       <Controls dispatch={dispatch} rules={state.rules} />
       <hr />
+      <Grid columns={21} rows={state.rows} />
     </React.Fragment>
   );
 }

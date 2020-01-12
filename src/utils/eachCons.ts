@@ -9,5 +9,5 @@ export default function eachCons<T>(array: T[], n: number): T[][] {
     cons.push(array.slice(i, i + n));
   }
 
-  return [];
+  return cons;
 }
