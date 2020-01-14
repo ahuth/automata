@@ -3,8 +3,10 @@ import Grid from './Grid';
 import RuleSelector from './RuleSelector';
 import * as Automata from '../utils/automata';
 
+const initialAutomata = Automata.create(31, 63);
+
 export default function App() {
-  const [automata, setAutomata] = useState(Automata.create(31, 63));
+  const [automata, setAutomata] = useState(initialAutomata);
 
   const toggleRule = useCallback(function (serializedInputs: string) {
     setAutomata(
