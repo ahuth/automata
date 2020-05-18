@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/automata/static/css/main.673280fd.chunk.css",
-    "main.js": "/automata/static/js/main.0db57869.chunk.js",
-    "main.js.map": "/automata/static/js/main.0db57869.chunk.js.map",
-    "runtime-main.js": "/automata/static/js/runtime-main.32b7d42b.js",
-    "runtime-main.js.map": "/automata/static/js/runtime-main.32b7d42b.js.map",
-    "static/js/2.c11a9413.chunk.js": "/automata/static/js/2.c11a9413.chunk.js",
-    "static/js/2.c11a9413.chunk.js.map": "/automata/static/js/2.c11a9413.chunk.js.map",
+    "main.js": "/automata/static/js/main.5edbea0b.chunk.js",
+    "main.js.map": "/automata/static/js/main.5edbea0b.chunk.js.map",
+    "runtime-main.js": "/automata/static/js/runtime-main.2530681e.js",
+    "runtime-main.js.map": "/automata/static/js/runtime-main.2530681e.js.map",
+    "static/js/2.2cf039b5.chunk.js": "/automata/static/js/2.2cf039b5.chunk.js",
+    "static/js/2.2cf039b5.chunk.js.map": "/automata/static/js/2.2cf039b5.chunk.js.map",
     "index.html": "/automata/index.html",
-    "precache-manifest.e80c77623d862ff044d47f9db4420da9.js": "/automata/precache-manifest.e80c77623d862ff044d47f9db4420da9.js",
+    "precache-manifest.7308dcf30353a78577ce8b2152ba8d48.js": "/automata/precache-manifest.7308dcf30353a78577ce8b2152ba8d48.js",
     "service-worker.js": "/automata/service-worker.js",
     "static/css/main.673280fd.chunk.css.map": "/automata/static/css/main.673280fd.chunk.css.map",
-    "static/js/2.c11a9413.chunk.js.LICENSE": "/automata/static/js/2.c11a9413.chunk.js.LICENSE"
+    "static/js/2.2cf039b5.chunk.js.LICENSE.txt": "/automata/static/js/2.2cf039b5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.32b7d42b.js",
-    "static/js/2.c11a9413.chunk.js",
+    "static/js/runtime-main.2530681e.js",
+    "static/js/2.2cf039b5.chunk.js",
     "static/css/main.673280fd.chunk.css",
-    "static/js/main.0db57869.chunk.js"
+    "static/js/main.5edbea0b.chunk.js"
   ]
 }
