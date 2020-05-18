@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import * as Rule from '../utils/rule';
+import * as Rule from '../rule';
 
 type Props = {
   rule: Rule.Type,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Type as Row } from '../utils/row';
+import { Type as Row } from '../row';
 
 type Props = {
   rows: Row[],
