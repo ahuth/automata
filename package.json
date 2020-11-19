@@ -12,15 +12,15 @@
     "types": "tsc --noEmit"
   },
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.0"
   },
   "devDependencies": {
-    "@types/react": "^16.9.35",
-    "@types/react-dom": "^16.9.8",
-    "gh-pages": "^2.2.0",
-    "typescript": "^3.9.2"
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9",
+    "gh-pages": "^3.1.0",
+    "typescript": "^4.0.5"
   },
   "browserslist": [
     ">0.2%",
