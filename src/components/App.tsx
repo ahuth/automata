@@ -3,7 +3,7 @@ import Grid from './Grid';
 import RuleSelector from './RuleSelector';
 import * as Automata from '../automata';
 
-const initialAutomata = Automata.create(31, 63);
+const initialAutomata = Automata.create(63, 127);
 
 export default function App() {
   const [automata, setAutomata] = useState(initialAutomata);
