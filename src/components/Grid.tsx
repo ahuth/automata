@@ -31,13 +31,11 @@ const styles = {
   },
   on: {
     backgroundColor: 'black',
-    border: '1px solid black',
     height: 8,
     width: 8,
   },
   off: {
     backgroundColor: 'white',
-    border: '1px solid black',
     height: 8,
     width: 8,
   },
