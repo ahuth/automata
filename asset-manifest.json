@@ -1,22 +1,20 @@
 {
   "files": {
-    "main.css": "/automata/static/css/main.673280fd.chunk.css",
-    "main.js": "/automata/static/js/main.5edbea0b.chunk.js",
-    "main.js.map": "/automata/static/js/main.5edbea0b.chunk.js.map",
-    "runtime-main.js": "/automata/static/js/runtime-main.2530681e.js",
-    "runtime-main.js.map": "/automata/static/js/runtime-main.2530681e.js.map",
-    "static/js/2.2cf039b5.chunk.js": "/automata/static/js/2.2cf039b5.chunk.js",
-    "static/js/2.2cf039b5.chunk.js.map": "/automata/static/js/2.2cf039b5.chunk.js.map",
+    "main.css": "/automata/static/css/main.f0842b1a.chunk.css",
+    "main.js": "/automata/static/js/main.601c5519.chunk.js",
+    "main.js.map": "/automata/static/js/main.601c5519.chunk.js.map",
+    "runtime-main.js": "/automata/static/js/runtime-main.5eec2fa8.js",
+    "runtime-main.js.map": "/automata/static/js/runtime-main.5eec2fa8.js.map",
+    "static/js/2.34b4eff3.chunk.js": "/automata/static/js/2.34b4eff3.chunk.js",
+    "static/js/2.34b4eff3.chunk.js.map": "/automata/static/js/2.34b4eff3.chunk.js.map",
     "index.html": "/automata/index.html",
-    "precache-manifest.7308dcf30353a78577ce8b2152ba8d48.js": "/automata/precache-manifest.7308dcf30353a78577ce8b2152ba8d48.js",
-    "service-worker.js": "/automata/service-worker.js",
-    "static/css/main.673280fd.chunk.css.map": "/automata/static/css/main.673280fd.chunk.css.map",
-    "static/js/2.2cf039b5.chunk.js.LICENSE.txt": "/automata/static/js/2.2cf039b5.chunk.js.LICENSE.txt"
+    "static/css/main.f0842b1a.chunk.css.map": "/automata/static/css/main.f0842b1a.chunk.css.map",
+    "static/js/2.34b4eff3.chunk.js.LICENSE.txt": "/automata/static/js/2.34b4eff3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2530681e.js",
-    "static/js/2.2cf039b5.chunk.js",
-    "static/css/main.673280fd.chunk.css",
-    "static/js/main.5edbea0b.chunk.js"
+    "static/js/runtime-main.5eec2fa8.js",
+    "static/js/2.34b4eff3.chunk.js",
+    "static/css/main.f0842b1a.chunk.css",
+    "static/js/main.601c5519.chunk.js"
   ]
 }
