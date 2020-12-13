@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/automata/static/css/main.f0842b1a.chunk.css",
-    "main.js": "/automata/static/js/main.601c5519.chunk.js",
-    "main.js.map": "/automata/static/js/main.601c5519.chunk.js.map",
+    "main.js": "/automata/static/js/main.0e7a7c3c.chunk.js",
+    "main.js.map": "/automata/static/js/main.0e7a7c3c.chunk.js.map",
     "runtime-main.js": "/automata/static/js/runtime-main.5eec2fa8.js",
     "runtime-main.js.map": "/automata/static/js/runtime-main.5eec2fa8.js.map",
-    "static/js/2.34b4eff3.chunk.js": "/automata/static/js/2.34b4eff3.chunk.js",
-    "static/js/2.34b4eff3.chunk.js.map": "/automata/static/js/2.34b4eff3.chunk.js.map",
+    "static/js/2.8d17f46e.chunk.js": "/automata/static/js/2.8d17f46e.chunk.js",
+    "static/js/2.8d17f46e.chunk.js.map": "/automata/static/js/2.8d17f46e.chunk.js.map",
     "index.html": "/automata/index.html",
     "static/css/main.f0842b1a.chunk.css.map": "/automata/static/css/main.f0842b1a.chunk.css.map",
-    "static/js/2.34b4eff3.chunk.js.LICENSE.txt": "/automata/static/js/2.34b4eff3.chunk.js.LICENSE.txt"
+    "static/js/2.8d17f46e.chunk.js.LICENSE.txt": "/automata/static/js/2.8d17f46e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5eec2fa8.js",
-    "static/js/2.34b4eff3.chunk.js",
+    "static/js/2.8d17f46e.chunk.js",
     "static/css/main.f0842b1a.chunk.css",
-    "static/js/main.601c5519.chunk.js"
+    "static/js/main.0e7a7c3c.chunk.js"
   ]
 }
