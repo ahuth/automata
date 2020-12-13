@@ -10,7 +10,10 @@ type Automata = {
 
 export type Type = Automata;
 
-export function create(height: number, width: number): Automata {
+export function create(generations: number): Automata {
+  const height = generations;
+  const width = height * 2 + 1;
+
   const rules = [
     Rule.create([1, 1, 1], 0),
     Rule.create([1, 1, 0], 0),
