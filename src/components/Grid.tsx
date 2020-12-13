@@ -1,5 +1,5 @@
 import React from 'react';
-import { Type as Row } from '../row';
+import { Type as Row } from '../automata/row';
 
 type Props = {
   rows: Row[],

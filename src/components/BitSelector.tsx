@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Rule from '../rule';
+import * as Rule from '../automata/rule';
 
 type Props = {
   onToggle: (position: Rule.Position) => void,

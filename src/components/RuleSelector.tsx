@@ -1,6 +1,6 @@
 import React from 'react';
 import BitSelector from './BitSelector';
-import * as Rule from '../rule';
+import * as Rule from '../automata/rule';
 
 type Props = {
   rule: Rule.Type,

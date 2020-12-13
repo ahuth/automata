@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Grid from './Grid';
 import RuleSelector from './RuleSelector';
-import * as Automata from '../automata';
+import * as Automata from '../automata/automata';
 
 const initialAutomata = Automata.create(63);
 
