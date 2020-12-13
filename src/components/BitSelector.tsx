@@ -1,17 +1,15 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import * as Rule from '../rule';
 
 type Props = {
-  rule: Rule.Type,
-  toggle: (inputs: string) => void,
+  onToggle: (position: Rule.Position) => void,
+  output: Rule.Bit;
+  position: Rule.Position;
 };
 
-export default function BitSelector({ rule, toggle }: Props) {
-  const { inputs, output } = rule;
-
-  const handleChange = useCallback(function () {
-    toggle(Rule.machineReadableInputs(rule));
-  }, [rule, toggle]);
+export default function BitSelector({ onToggle, output, position }: Props) {
+  const inputsString = Rule.positionToString(position);
+  const inputs = inputsString.split('').map(Number);
 
   return (
     <div style={styles.container}>
@@ -21,9 +19,9 @@ export default function BitSelector({ rule, toggle }: Props) {
         })}
       </div>
       <input
-        aria-label={Rule.humanReadableInputs(rule)}
+        aria-label={inputsString}
         checked={output === 0 ? false : true}
-        onChange={handleChange}
+        onChange={() => onToggle(position)}
         type="checkbox"
       />
     </div>

@@ -3,20 +3,19 @@ import BitSelector from './BitSelector';
 import * as Rule from '../rule';
 
 type Props = {
-  rules: Rule.Type[],
-  toggleRule: (inputs: string) => void,
+  rule: Rule.Type,
+  onToggle: (position: Rule.Position) => void,
 };
 
-export default function RuleSelector({ rules, toggleRule }: Props) {
-  const outputBits = rules.map(rule => rule.output);
-  const ruleNumber = parseInt(outputBits.join(''), 2);
+export default function RuleSelector({ rule, onToggle }: Props) {
+  const ruleNumber = Rule.toNumber(rule);
 
   return (
     <fieldset style={styles.container}>
       <legend>Automata Rule</legend>
       <div style={styles.selectors}>
-        {rules.map(function (rule) {
-          return <BitSelector key={Rule.machineReadableInputs(rule)} rule={rule} toggle={toggleRule} />;
+        {Rule.map(rule, (position, output) => {
+          return <BitSelector key={position} position={position} output={output} onToggle={onToggle} />;
         })}
       </div>
       <span>Rule {ruleNumber}</span>

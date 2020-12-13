@@ -5,7 +5,7 @@ type Automata = {
   height: number,
   width: number,
   rows: World.Type,
-  rules: Rule.Type[],
+  rule: Rule.Type,
 };
 
 export type Type = Automata;
@@ -14,36 +14,23 @@ export function create(generations: number): Automata {
   const height = generations;
   const width = height * 2 + 1;
 
-  const rules = [
-    Rule.create([1, 1, 1], 0),
-    Rule.create([1, 1, 0], 0),
-    Rule.create([1, 0, 1], 0),
-    Rule.create([1, 0, 0], 1),
-    Rule.create([0, 1, 1], 1),
-    Rule.create([0, 1, 0], 1),
-    Rule.create([0, 0, 1], 1),
-    Rule.create([0, 0, 0], 0),
-  ];
+  // Rule 30.
+  const rule = Rule.create(0, 0, 0, 1, 1, 1, 1, 0);
 
   return {
     height,
     width,
-    rows: World.create(height, width, rules),
-    rules,
+    rows: World.create(height, width, rule),
+    rule,
   };
 }
 
-export function toggleRule(automata: Automata, serializedOutputs: string): Automata {
-  const nextRules = automata.rules.map(function (rule) {
-    if (Rule.machineReadableInputs(rule) === serializedOutputs) {
-      return Rule.toggle(rule);
-    }
-    return rule;
-  });
+export function toggleRule(automata: Automata, position: Rule.Position): Automata {
+  const nextRule = Rule.toggle(automata.rule, position);
 
   return {
     ...automata,
-    rows: World.create(automata.height, automata.width, nextRules),
-    rules: nextRules,
+    rows: World.create(automata.height, automata.width, nextRule),
+    rule: nextRule,
   };
 }

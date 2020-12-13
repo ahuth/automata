@@ -1,6 +1,7 @@
 import * as Rule from './rule';
 
-type Row = number[];
+type Row = Rule.Bit[];
+type Neighborhood = [Rule.Bit, Rule.Bit, Rule.Bit];
 
 export type Type = Row;
 
@@ -11,14 +12,14 @@ export function create(size: number): Row {
   return row;
 }
 
-export function next(row: Row, rules: Rule.Type[]): Row {
+export function next(row: Row, rule: Rule.Type): Row {
   return eachNeighborhood(row).map(function (neighbors) {
-    const rule = Rule.find(rules, neighbors);
-    return rule.output;
+    const position = Rule.getPositionFromList(neighbors);
+    return rule[position];
   });
 }
 
-function eachNeighborhood(row: Row): number[][] {
+function eachNeighborhood(row: Row): Neighborhood[] {
   return row.map(function (value, index, array) {
     const prevIndex = index - 1;
     const nextIndex = index + 1;
