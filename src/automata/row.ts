@@ -13,7 +13,7 @@ export function create(size: number): Row {
 export function next(row: Row, rule: Rule.Rule): Row {
   return eachNeighborhood(row).map(function (neighbors) {
     const position = Rule.getPositionFromList(neighbors);
-    return rule[position];
+    return Rule.getBit(rule, position);
   });
 }
 
