@@ -1,14 +1,12 @@
 import * as Rule from './rule';
 import * as World from './world';
 
-type Automata = {
+export type Automata = {
   height: number,
   width: number,
-  rows: World.Type,
-  rule: Rule.Type,
+  rows: World.World,
+  rule: Rule.Rule,
 };
-
-export type Type = Automata;
 
 export function create(generations: number): Automata {
   const height = generations;

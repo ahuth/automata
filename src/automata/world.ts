@@ -1,11 +1,9 @@
 import * as Row from './row';
 import * as Rule from './rule';
 
-type World = Row.Type[];
+export type World = Row.Row[];
 
-export type Type = World;
-
-export function create(height: number, width: number, rule: Rule.Type): World {
+export function create(height: number, width: number, rule: Rule.Rule): World {
   const rows = [Row.create(width)];
 
   for (let i = 0; i < height; i++) {

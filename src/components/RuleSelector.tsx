@@ -3,7 +3,7 @@ import BitSelector from './BitSelector';
 import * as Rule from '../automata/rule';
 
 type Props = {
-  rule: Rule.Type,
+  rule: Rule.Rule,
   onToggle: (position: Rule.Position) => void,
 };
 

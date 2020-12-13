@@ -1,9 +1,7 @@
 import * as Rule from './rule';
 
-type Row = Rule.Bit[];
+export type Row = Rule.Bit[];
 type Neighborhood = [Rule.Bit, Rule.Bit, Rule.Bit];
-
-export type Type = Row;
 
 export function create(size: number): Row {
   const row = new Array(size).fill(0);
@@ -12,7 +10,7 @@ export function create(size: number): Row {
   return row;
 }
 
-export function next(row: Row, rule: Rule.Type): Row {
+export function next(row: Row, rule: Rule.Rule): Row {
   return eachNeighborhood(row).map(function (neighbors) {
     const position = Rule.getPositionFromList(neighbors);
     return rule[position];
